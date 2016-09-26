@@ -68,31 +68,31 @@ function listWeapons(weapon) {
 // This function should attack with the specified weapon
 // It uses the weapon damage from the object to determine the maximum damage of this weapon
 function weaponAttack(name, weapon) {
-        if (name == "gandalf") {
+        if (onClick == "gandalf") {
             console.log(wizard);
         }
-        if (name == "conan"){
+        if (onClick  == "conan"){
             console.log(warrior);
             
         }
-        if (weapon == "axe"){
+        if (onClick  == "axe"){
             console.log(aDamage);
     }
-   if (weapon == "+1 Arrows of Punishing") {
+   if (onClick == "+1 Arrows of Punishing") {
         console.log(bowDamage);
     }
-    if (weapon == "Wooden Arrwos"){
+    if (onClick  == "Wooden Arrwos"){
         console.log(arrowDamage)
     }
-    if (weapon== "staff") {
+    if (onClick == "staff") {
         console.log(staffDamage);
 
     }
-    if(weapon == "dagger") {
+    if(onClick  == "dagger") {
         console.log(daggerDamage);
 
     function fight(){
-        var result3= weaponAttack("axe")
+        var result3= weaponAttack("")
         console.log(result3)
         return result3;
     }
@@ -111,6 +111,18 @@ function weaponAttack(name, weapon) {
         console.log(workPleasee);
         return workPleasee;
     }
-   
+    function fightOnClick(){
+        var pcode = $("#listWeapons").val();
+        listCharacters(pcode);
+        console.log(fight());
+
+    }
+     $(function () {
+                $("#fight").on("click", fightOnClick)
+                
+                console.log(fight());
+            });
  }}
+
+ 
  
