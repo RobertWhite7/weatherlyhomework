@@ -10,10 +10,10 @@ var gList = ("Gandalf" + gsWeapons + gdWeapons);
 var cList = ("Conan" + caWeapons + cbWeapons);
 var wizard = "Gandalf";
 var warrior = "Conan";
-var aDamage = caWeapons + 50;
+var aDamage = "Conans SMASHES Gandolf with his " + caWeapons + "for " + 50;
 var bowDamage = cbWeapons + 40;
 var arrowDamage = cbaWeapons + 10;
-var staffDamage = gsWeapons + 5;
+var staffDamage = "Gandolf hits Conan with his " + gsWeapons + " for " + 5;
 var daggerDamage = gsWeapons + 1;
 
 
@@ -49,20 +49,48 @@ var adventuringParty = {
 
 // This function lists all characters in the party
 function listCharacters(name) {
-
-
+    console.log(name);
     var result = (wizard + warrior);
     return result;
 
 }
-// This function should list all weapons for the character
-function listWeapons(weapon) {
+listCharacters(wizard);
+listCharacters(warrior);
+listCharacters(wizard);
+listCharacters(gsWeapons);
+listCharacters(gdWeapons);
+listCharacters(warrior);
+listCharacters(caWeapons);
+listCharacters(cbWeapons);
+listCharacters(cbaWeapons);
+listCharacters(warrior);
+listCharacters(aDamage);
+listCharacters(wizard);
+listCharacters(staffDamage);
+/*This function should list all weapons for the character
+Characters:                                                                                                                                                                                                  
+ * Gandalf                                                                                                                                                                                                   
+ * Conan                                                                                                                                                                                                     
+Listing weapons for Gandalf:                                                                                                                                                                                 
+ * Staff                                                                                                                                                                                                     
+ * Dagger                                                                                                                                                                                                    
+Listing weapons for Conan:                                                                                                                                                                                   
+ * Axe                                                                                                                                                                                                       
+ * Bow                                                                                                                                                                                                       
+Conan attacks with his axe                                                                                                                                                                                   
+He hits for 17 damage                                                                                                                                                                                        
+Gandalf attacks with his STAFF                                                                                                                                                                               
+He hits for 3 damage         
+ */
+function listWeapons(weapons) {
 
     var result2 = (cList + gList);
     return result2;
 
 
 }
+
+
 
 
 // This function should attack with the specified weapon
@@ -95,7 +123,9 @@ function weaponAttack(name, weapon) {
         var result3= weaponAttack("")
         console.log(result3)
         return result3;
+        
     }
+     weaponAttack();
 
 
     function doesItWork() {
@@ -124,5 +154,4 @@ function weaponAttack(name, weapon) {
             });
  }}
 
- 
  
