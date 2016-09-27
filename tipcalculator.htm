@@ -17,13 +17,39 @@
 
     <link rel="stylesheet" type="text/css" href="slate-theme.css">
  
-    <script type="text/javascript" src="fixme2.js"></script>
 
 
     <body>
-        <input type="text" id="adventuringParty" placeholder="Gandalf or Conan"></input>
- <button id="fight" type="button" class="btn btn-default">Fight</button>
-
+        <div id="outer" style="width:100%" align="center">
+   <div class ="col-md-12" id="inner">
+    <header>
+        <h1>Tip Calculator</h1>
+    </header>
+    <form action="javascript:void(calc())">
+       Bill Amount: <br>
+       $<input id="bill" type="text">
+        <br>
+        <input type="submit" value="Calculate">
+        <br>
+        <form action="javascript:void(calc())">
+       How many are sharing bill?: <br>
+       <input id="bill" type="text"><br>
+       Tip 10%: <span id="tip"></span>
+       <br>
+          Tip 15%: <span id="tip2"></span>
+       <br>
+          Tip 20%: <span id="tip3"></span>
+       <br>
+        Total: <span id="total"></span>
+        <br>
+        Total: <span id="total2"></span>
+        <br>
+        Total: <span id="total3"></span>
+    </form>
+</div>
+</div>
     </body>
-
+<script type="text/javascript" src="tipcalculator.js"></script>
 </html>
+
+
