@@ -17,19 +17,30 @@
 
     <link rel="stylesheet" type="text/css" href="slate-theme.css">
  
+</head>
+
+<body>
+    <div id="outer" style="background-color: darkRed; height: 330px;" align="center">
+        <div class="col-md-12" id="inner">
+            <header>
+                <h1>Tip Calculator</h1>
+            </header>
+            <form action="javascript:void(calc())">
+                Bill Amount: <br> $
+                <input id="bill" type="text" maxlength="6">
+                <br>
+                <label>Tip</label>
+                <input type="radio" name="group" maxlength="6" value="1" checked  />
 
 
-    <body>
-        <div id="outer" style="width:100%" align="center">
-   <div class ="col-md-12" id="inner">
-    <header>
-        <h1>Tip Calculator</h1>
-    </header>
-    <form action="javascript:void(calc())">
-       Bill Amount: <br>
-       $<input id="bill" type="text">
-        <br>
-        <input type="submit" value="Calculate">
+                <div>
+                    <select id="drop1">
+    <option>Thankful Tip 10%</option>
+    <option>Great Service Tip 15%</option>
+    <option>Amazing Service Tip 20%</option>
+ 
+</div>
+         <input type="submit" value="Calculate">
         <br>
         <form action="javascript:void(calc())">
        How many are sharing bill?: <br>
@@ -51,5 +62,3 @@
     </body>
 <script type="text/javascript" src="tipcalculator.js"></script>
 </html>
-
-
