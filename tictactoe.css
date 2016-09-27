@@ -13,7 +13,7 @@
     height:60px; 
     line-height:60px; 
     font-size:40px; 
-    color:#ccc}
+    color:black}
 #tic-tac-toe #game li.disable{
     color:#fff}
 #tic-tac-toe #game {
@@ -62,4 +62,5 @@
     width:52px}
     li{
     height: 50px;
-    width: 70px;}ß
+    width: 70px;}
+ 
