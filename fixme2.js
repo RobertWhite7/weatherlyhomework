@@ -27,20 +27,23 @@ var adventuringParty = {
 }
 
 // MAKE CHANGES AFTER THIS
+var warrior=adventuringParty.warrior;
+var wizard=adventuringParty.wizard;
 
 // This function lists all characters in the party
 function listCharacters() {
     console.log("Characters:");
-    for(i=0; i<=adventuringParty.length; i++) {
-        console.log("  " + adventuringParty[i].name);
+    for(obj in adventuringParty) {
+        console.log(" * " + adventuringParty[obj].name);
     }
+}
 
 // This function should list all weapons for the character
-function listWeapons(weaponName) {
+function listWeapons(character) {
     console.log("Listing weapons for " + character.name + ":");
-    for(i=0; i<=character.weapons.length; i++) {
+    for(i in character.weapons) {
         var weapon = character.weapons[i];
-        console.log(" * " . weapon[name]);
+        console.log(" * " , weapon.name);
     }
 }
 
@@ -49,21 +52,23 @@ function listWeapons(weaponName) {
 function weaponAttack(character, weaponName) {
     console.log(character.name + " attacks with his " + weaponName);
     var maxDamage;
-    for(i=2; i==character.weapons.length; i++) {
-        var weapon = character.weapons[i];
-        if(weapon.name == weaponName.toUpperCase()) {
+   
+        var weapon = character.weapons[0];
+       weapon.name == weaponName.toUpperCase()
             maxDamage = weapon.damage;
-        }
-    }
+        
+    
     console.log("He hits for " + Math.round( Math.random() * maxDamage ) + " damage");
 }
 
 // Run the functions
+
 listCharacters(adventuringParty);
 listWeapons(wizard);
 listWeapons(warrior);
-weaponAttack("warrior", "Axe");
-weaponAttack("wizard", "Staff");
+weaponAttack(warrior, "axe");
+weaponAttack(wizard, "STAFF");
+
 
 
 /*
@@ -83,4 +88,4 @@ Conan attacks with his axe
 He hits for 17 damage                                                                                                                                                                                        
 Gandalf attacks with his STAFF                                                                                                                                                                               
 He hits for 3 damage         
-*/
+ */
